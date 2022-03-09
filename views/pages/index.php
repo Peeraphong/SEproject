@@ -6,6 +6,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
+<link href="https://icons8.com/icon/20FjgTazh8FG/download">Download icon by Icons8</link>>
 
 </head>
 <body>
@@ -13,13 +14,13 @@
 <section class="app">
   <aside class="sidebar">
          <header>
-          KU_LOGO
+         <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTR7A6FocrFnrsfomJyBtrL0rf10unbdI3y5IZlEeRFZXLPB5cmPGJzxfiBl5PcKOK8I6I&usqp=CAU" width = "50"/>
       </header>
     <nav class="sidebar-nav">
  
       <ul>
         <li>
-          <a href="#"><i class="ion-android-menu"></i> <span>ประกาศ</span></a>
+          <a href="http://localhost/SEproject/views/pages/#"><i class="ion-ios-paper-outline"></i> <span>ประกาศ</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-color-filter-outline"></i>Derps</a>
@@ -36,7 +37,8 @@
           </ul>
         </li>
         <li>
-          <a href="#"><i class="ion-ios-settings"></i> <span class="">สถานประกอบการ</span></a>
+          <a href="http://localhost/SEproject/views/company/#"><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
+          
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-alarm-outline"></i>Watch</a>
@@ -53,7 +55,7 @@
           </ul>
         </li>
         <li>
-          <a href="#"><i class="ion-ios-briefcase-outline"></i> <span class="">ยื่นเอกสาร</span></a>
+          <a href="http://localhost/SEproject/views/submitDoc/#"><i class="ion-ios-filing-outline"></i> <span class="">ยื่นเอกสาร</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-flame-outline"></i>Burn</a>
@@ -73,7 +75,7 @@
           </ul>
         </li>
         <li>
-          <a href="#"><i class="ion-ios-analytics-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
+          <a href="#"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-timer-outline"></i>Timers</a>
@@ -92,7 +94,7 @@
             </li>
           </ul>
         </li>
-        <li>
+        <!--<li>
           <a href="#"><i class="ion-ios-paper-outline"></i> <span class="">Papers</span></a>
           <ul class="nav-flyout">
             <li>
@@ -108,9 +110,9 @@
               <a href="#"><i class="ion-android-star-outline"></i>Shop</a>
             </li>
           </ul>
-        </li>
-        <li>
-          <a href="#"><i class="ion-ios-navigate-outline"></i> <span class="">Ass Finder</span></a>
+        </li>-->
+        <!--<li>
+          <a href="#"><i class="ion-ios-download-outline"></i> <span class="">Ass Finder</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-flame-outline"></i>Burn</a>
@@ -128,9 +130,10 @@
               <a href="#"><i class="ion-ios-navigate-outline"></i>Ghostface</a>
             </li>
           </ul>
-        </li>
+        </li>-->
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <li>
-          <a href="#"><i class="ion-ios-medical-outline"></i> <span class="">Cocaine</span></a>
+          <a href="#"><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
         </li>
       </ul>
     </nav>
