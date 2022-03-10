@@ -35,7 +35,7 @@
  
       <ul>
         <li>
-          <a href="http://localhost/SEproject/views/pages/#"><i class="ion-ios-paper-outline"></i> <span>ประกาศ</span></a>
+          <a href=""><i class="ion-ios-paper-outline"></i> <span>ประกาศ</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-color-filter-outline"></i>Derps</a>
@@ -52,7 +52,7 @@
           </ul>
         </li>
         <li>
-          <a href="http://localhost/SEproject/views/company/#"><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
+          <a href="http://localhost/SEproject/views/company/index_company.php"><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
           
           <ul class="nav-flyout">
             <li>
@@ -70,7 +70,7 @@
           </ul>
         </li>
         <li>
-          <a href="http://localhost/SEproject/views/submitDoc/#"><i class="ion-ios-filing-outline"></i> <span class="">ยื่นเอกสาร</span></a>
+          <a href="http://localhost/SEproject/views/submitDoc/index_submitDoc.php"><i class="ion-ios-filing-outline"></i> <span class="">ยื่นเอกสาร</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-flame-outline"></i>Burn</a>
@@ -90,7 +90,7 @@
           </ul>
         </li>
         <li>
-          <a href="#"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
+          <a href="http://localhost/SEproject/views/downloadDoc/index_downloadDoc.php"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
           <ul class="nav-flyout">
             <li>
               <a href="#"><i class="ion-ios-timer-outline"></i>Timers</a>
@@ -148,7 +148,7 @@
         </li>-->
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <li>
-          <a href="http://localhost/SEproject/views/contact/#"><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
+          <a href="http://localhost/SEproject/views/contact/index_contact.php"><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
         </li>
       </ul>
     </nav>
@@ -277,16 +277,7 @@ Sidebar Nav
   display: inline;
   vertical-align: middle;
 }
-.sidebar-nav > ul > li > a:after {
-  content: "";
-  font-family: ionicons;
-  font-size: 0.5em;
-  width: 10px;
-  color: #fff;
-  position: absolute;
-  right: 0.75em;
-  top: 45%;
-}
+
 .sidebar-nav .nav-flyout {
   position: absolute;
   background-color: #080D11;
@@ -324,14 +315,14 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #3DB2FF;
 }
 
 .topnav a {
   float: right;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
-  padding: 20px 30px;
+  padding: 29px 30px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -342,8 +333,8 @@ body {
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: white;
+  color: black;
 }
 </style>
 </html>

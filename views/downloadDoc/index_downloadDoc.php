@@ -2,17 +2,16 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Company</title>
+  <title>Download Document</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
 
 </head>
 <body>
-
 <!-- Head Bar -->
 <div class="topnav">
-  <a href="#Login">Login</a>
+  <a href="#home">Login</a>
 </div>
 
 <!-- partial:index.partial.html -->
@@ -30,7 +29,7 @@
           
         </li>
         <li>
-          <a href=""><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
+          <a href="http://localhost/SEproject/views/company/index_company.php"><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
           
           
         </li>
@@ -40,7 +39,7 @@
 
         </li>
         <li>
-          <a href="http://localhost/SEproject/views/downloadDoc/index_downloadDoc.php"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
+          <a href=""><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
           
 
         </li>

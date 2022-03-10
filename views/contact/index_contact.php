@@ -2,7 +2,7 @@
 <html lang="en" >
 <head>
   <meta charset="UTF-8">
-  <title>Home</title>
+  <title>Contact Us</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
@@ -24,28 +24,28 @@
  
       <ul>
         <li>
-          <a href="http://localhost/SEproject/views/pages/#"><i class="ion-ios-paper-outline"></i> <span>ประกาศ</span></a>
+          <a href="http://localhost/SEproject/views/pages/index_page.php"><i class="ion-ios-paper-outline"></i> <span>ประกาศ</span></a>
           
           
         </li>
         <li>
-          <a href="http://localhost/SEproject/views/company/#"><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
+          <a href="http://localhost/SEproject/views/company/index_company.php"><i class="ion-ios-briefcase-outline"></i> <span class="">สถานประกอบการ</span></a>
           
           
         </li>
         <li>
-          <a href="http://localhost/SEproject/views/submitDoc/#"><i class="ion-ios-filing-outline"></i> <span class="">ยื่นเอกสาร</span></a>
+          <a href="http://localhost/SEproject/views/submitDoc/index_submitDoc.php"><i class="ion-ios-filing-outline"></i> <span class="">ยื่นเอกสาร</span></a>
 
 
         </li>
         <li>
-          <a href="http://localhost/SEproject/views/contact/#"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
+          <a href="http://localhost/SEproject/views/downloadDoc/index_downloadDoc.php"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
           
 
         </li>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <li>
-          <a href="#"><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
+          <a href=""><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
         </li>
       </ul>
     </nav>
@@ -216,14 +216,14 @@ body {
 
 .topnav {
   overflow: hidden;
-  background-color: #333;
+  background-color: #3DB2FF;
 }
 
 .topnav a {
   float: right;
-  color: #f2f2f2;
+  color: black;
   text-align: center;
-  padding: 20px 30px;
+  padding: 29px 30px;
   text-decoration: none;
   font-size: 17px;
 }
@@ -234,8 +234,8 @@ body {
 }
 
 .topnav a.active {
-  background-color: #04AA6D;
-  color: white;
+  background-color: white;
+  color: black;
 }
 </style>
 </html>
