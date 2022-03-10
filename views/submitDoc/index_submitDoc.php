@@ -15,7 +15,38 @@
   <a href="#home">Login</a>
 </div>
 
+<div  class="upload">
+  <form method="POST" enctype="multipart/form-data" action="upload.php">
+    Select file to upload:
+    <input type="file" name="file">
+    <input type="submit" value="Upload">
+  </form>
+  <br>
+  <?php 
+    $files = scandir("uploads");
+    for($a = 2; $a < count($files); $a++){
+      ?>
+      <p>
+        <a download = "<?php echo $files[$a] ?>" herf="uploads/<?php echo $files[$a] ?>">
+          <?php echo $files[$a] ?>
+          <br>
+          <img src="<?php echo $files[$a]; ?>">
+          <br>
+        </a>
+      </p>
+      <?php
+    }
+  ?>
+  
+</div>
+
+
+
+
+
+
 <!-- partial:index.partial.html -->
+
 <section class="app">
   <aside class="sidebar">
          <header>
@@ -237,6 +268,11 @@ body {
 .topnav a.active {
   background-color: white;
   color: black;
+}
+
+.upload {
+  padding-left: 800px;
+  padding-top: 5%;
 }
 </style>
 </html>
