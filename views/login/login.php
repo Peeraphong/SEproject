@@ -5,7 +5,7 @@ session_start();
                   include("connection.php");
 				//รับค่า user & password
                   $Username = $_POST['Username'];
-                  $Password = md5($_POST['Password']);
+                  $Password = $_POST['Password'];
 				//query 
                   $sql="SELECT * FROM User Where Username='".$Username."' and Password='".$Password."' ";
 
