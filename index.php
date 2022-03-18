@@ -54,6 +54,7 @@ if(isset($_GET['controller']) && isset($_GET['action']))
     </nav>
   </aside>
 </section>-->
+
 <!-- partial -->
   <?php require_once("./routes.php"); ?>
 </body>
@@ -94,7 +95,7 @@ a:hover {
 }
 
 .app {
-  height: 100vh;
+  height: 170px;
 }
 
 /* -------------

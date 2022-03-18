@@ -20,7 +20,7 @@ function call($controller, $action){
 		
 
 		case "company" :	
-			
+			require_once("models/companyModel.php");
 			$controller = new CompanyController();
 		break;
 
