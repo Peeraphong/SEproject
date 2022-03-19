@@ -12,7 +12,6 @@
 
   <div class="title" >
     <b>สถานประกอบการที่เคยรับนิสิตฝึกงาน</b>
-    
   </div>
 <br><br>
   <div class="container">

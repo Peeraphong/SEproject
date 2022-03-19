@@ -13,6 +13,7 @@ function call($controller, $action){
 	switch($controller)
 	{
 		case "pages":	
+			require_once("models/annouceModel.php");
 			$controller = new PagesController();
 		break;
 		
