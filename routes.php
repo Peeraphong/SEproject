@@ -4,7 +4,7 @@ $controllers = array(
  	'company'=>['index'],
 	'submitDoc'=>['index'],
 	'downloadDoc'=>['index'],
-	'contact'=>['index']
+	'contact'=>['index', 'add']
 );
 
 function call($controller, $action){
@@ -13,8 +13,6 @@ function call($controller, $action){
 	switch($controller)
 	{
 		case "pages":	
-			/*require_once("models/atkModel.php");
-			require_once("models/companyModel.php");*/
 			$controller = new PagesController();
 		break;
 		
@@ -35,7 +33,7 @@ function call($controller, $action){
 		break;
 
 		case "contact" :	
-			
+			require_once("models/contactModel.php");
 			$controller = new ContactController();
 		break;
 						
