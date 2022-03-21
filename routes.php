@@ -2,7 +2,7 @@
 $controllers = array(
 	'pages'=>['index', 'error'],
  	'company'=>['index'],
-	'submitDoc'=>['index'],
+	'submitDoc'=>['index', 'add'],
 	'downloadDoc'=>['index'],
 	'contact'=>['index', 'add']
 );
@@ -24,7 +24,7 @@ function call($controller, $action){
 		break;
 
 		case "submitDoc" :	
-			
+			require_once("models/submitDocModel.php");
 			$controller = new submitDocController();
 		break;
 
