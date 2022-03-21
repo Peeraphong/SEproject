@@ -29,7 +29,7 @@ function call($controller, $action){
 		break;
 
 		case "downloadDoc" :	
-			
+			require_once("models/downloadModel.php");		
 			$controller = new DownloadDocController();
 		break;
 
