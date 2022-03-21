@@ -42,8 +42,12 @@
 
 <style>
 
+  table {
+    height: 500px;
+  }
+
   .container {
-    margin-left: 30em;
+    margin-left: 25em;
   }
 
   .title {
