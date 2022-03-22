@@ -9,10 +9,6 @@
 
 </head>
 <body>
-    <?php
-      echo "<script>alert('กรุณาเข้าสู่ระบบ');</script>";
-      echo "<script>window.location.href='../SEproject/?controller=login&action=index'</script>";
-    ?>
 
 <h2>ฟอร์มยื่นคำร้องขอฝึกงาน/สหกิจศึกษา</h2><br>
 
