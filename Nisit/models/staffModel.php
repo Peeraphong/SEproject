@@ -62,5 +62,24 @@
             return new Staff($Staff_ID,$Staff_Username,$Staff_Password,$Staff_Position,$Staff_Name);
         }
 
+        public static function get($Staff_ID){
+
+            require("connection_connect.php");
+
+            $sql = "SELECT * FROM staff WHERE Staff_ID = '$Staff_ID' ";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+
+            $Staff_ID = $my_row['Staff_ID'];
+            $Staff_Username = $my_row['Staff_Username'];
+            $Staff_Password = $my_row['Staff_Password'];
+            $Staff_Position = $my_row['Staff_Position'];
+            $Staff_Name = $my_row['Staff_Name'];
+
+            require("connection_close.php");
+
+            return new Staff($Staff_ID,$Staff_Username,$Staff_Password,$Staff_Position,$Staff_Name);
+        }
+
     }
 ?>

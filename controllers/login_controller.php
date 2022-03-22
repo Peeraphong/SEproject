@@ -9,6 +9,7 @@
 
         public function check()
         {
+            session_start();
             $Username=$_POST['Username'];
             $Password=$_POST['Password'];
             $loginList1 = Student::check($Username,$Password);

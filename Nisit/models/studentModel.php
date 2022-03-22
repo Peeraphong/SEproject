@@ -57,5 +57,23 @@
             return new Student($Student_ID,$Student_Username,$Student_Password,$Student_Name);
         }
 
+        public static function get($Student_ID){
+
+            require("connection_connect.php");
+
+            $sql = "SELECT * FROM student WHERE Student_ID = '$Student_ID' ";
+            $result = $conn->query($sql);
+            $my_row = $result->fetch_assoc();
+
+            $Student_ID = $my_row['Student_ID'];
+            $Student_Username = $my_row['Student_Username'];
+            $Student_Password = $my_row['Student_Password'];
+            $Student_Name = $my_row['Student_Name'];
+
+            require("connection_close.php");
+
+            return new Student($Student_ID,$Student_Username,$Student_Password,$Student_Name);
+        }
+
     }
 ?>

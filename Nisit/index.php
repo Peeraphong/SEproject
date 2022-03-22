@@ -1,3 +1,6 @@
+<?php 
+    session_start();
+?>
 <?php
 if(isset($_GET['controller']) && isset($_GET['action'])) 
 {   $controller = $_GET['controller'];
@@ -24,7 +27,7 @@ if(isset($_GET['controller']) && isset($_GET['action']))
   </div>
 </head>
 <body>
-<br><br>
+<br><br><!--<br><br><br><br>-->
 <!-- Head Bar -->
 
 <section class="app">
