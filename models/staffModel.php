@@ -32,5 +32,35 @@
             return $staffList;
         }
 
+        public static function check($ID,$PASS){
+
+            require("connection_connect.php");
+
+            $sql="SELECT * FROM `staff` WHERE Staff_Username LIKE '$ID' AND Staff_Password LIKE '$PASS'";
+            $result=$conn->query($sql);
+            $my_row = $result->fetch_assoc();
+            if($my_row===null)
+            {
+                $Staff_ID = "";
+                $Staff_Username = "";
+                $Staff_Password = "";
+                $Staff_Position = "";
+                $Staff_Name = "";
+            }
+            else
+            {
+                $Staff_ID = $my_row['Staff_ID'];
+                $Staff_Username = $my_row['Staff_Username'];
+                $Staff_Password = $my_row['Staff_Password'];
+                $Staff_Position = $my_row['Staff_Position'];
+                $Staff_Name = $my_row['Staff_Name'];
+            }
+
+            
+            require("connection_close.php");
+            
+            return new Staff($Staff_ID,$Staff_Username,$Staff_Password,$Staff_Position,$Staff_Name);
+        }
+
     }
 ?>

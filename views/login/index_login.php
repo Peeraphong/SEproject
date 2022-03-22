@@ -18,7 +18,7 @@
           <input type="password" required name="Password" placeholder="Password">
         </p>
         <p>
-          <button type="submit" namr="action" value="Login">Login</button>
+          <button type="submit" name="action" value="Login">Login</button>
           &nbsp;&nbsp;
           <button type="reset">Reset</button>
           <br>

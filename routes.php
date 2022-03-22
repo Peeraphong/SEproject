@@ -42,6 +42,8 @@ function call($controller, $action){
 		case "login" :	
 			require_once("models/annouceModel.php");
 			require_once("models/accountModel.php");
+			require_once("models/studentModel.php");
+			require_once("models/staffModel.php");
 			$controller = new LoginController();
 		break;
 						

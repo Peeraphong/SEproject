@@ -7,7 +7,7 @@ $controllers = array(
 	'contact'=>['index', 'add'],
 	'login'=>['index', 'check'],
 	'logout'=>['index'],
-	'nisit'=>['index','nisit']
+	'student'=>['index','getNisit']
 );
 
 function call($controller, $action){
@@ -52,10 +52,11 @@ function call($controller, $action){
 			$controller = new LogOutController();
 		break;
 
-		case "nisit" :	
+		case "student" :	
 			require_once("models/submitDocModel.php");
+			require_once("models/staffModel.php");
 			require_once("models/studentModel.php");
-			$controller = new NisitController();
+			$controller = new StudentController();
 		break;
 						
 						

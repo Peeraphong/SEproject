@@ -18,6 +18,9 @@
 
 <div class="container">
     <b>ชื่อ-นามสกุล :</b> 
+    <?php
+      echo $nisit->Student_Name
+    ?>
     
 
 </div>

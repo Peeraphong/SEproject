@@ -10,7 +10,6 @@
             $this->Student_Username = $Student_Username;
             $this->Student_Password = $Student_Password;
             $this->Student_Name = $Student_Name;
-            
         }
 
         public static function getAll(){
@@ -30,25 +29,33 @@
             return $studentList;
         }
 
-        public static function get($ID){
+        public static function check($ID,$PASS){
 
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM student WHERE Student_ID = '$ID' ";
-            $result = $conn->query($sql);
+            $sql="SELECT * FROM `student` WHERE (Student_Username LIKE '$ID' AND Student_Password LIKE '$PASS')";
+            $result=$conn->query($sql);
             $my_row = $result->fetch_assoc();
+            if($my_row===null)
+            {
+                $Student_ID = "";
+                $Student_Username = "";
+                $Student_Password = "";
+                $Student_Name = "";
+            }
+            else
+            {
+                $Student_ID = $my_row['Student_ID'];
+                $Student_Username = $my_row['Student_Username'];
+                $Student_Password = $my_row['Student_Password'];
+                $Student_Name = $my_row['Student_Name'];
+            }
 
-            $Student_ID = $my_row['Student_ID'];
-            $Student_Username = $my_row['Student_Username'];
-            $Student_Password = $my_row['Student_Password'];
-            $Student_Name = $my_row['Student_Name'];
-
+            
             require("connection_close.php");
-
+            
             return new Student($Student_ID,$Student_Username,$Student_Password,$Student_Name);
         }
-
-        
 
     }
 ?>
