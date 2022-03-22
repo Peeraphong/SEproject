@@ -19,7 +19,7 @@ if(isset($_GET['controller']) && isset($_GET['action']))
 <link rel="stylesheet" href="./style.css">
 <link href="https://icons8.com/icon/20FjgTazh8FG/download"></link>
   <div class="nav2">
-    <a href="#home">Login</a>
+    <a href="?controller=login&action=index">Login</a>
   </div>
 </head>
 <body>
@@ -46,7 +46,7 @@ if(isset($_GET['controller']) && isset($_GET['action']))
         <li>
           <a href="?controller=downloadDoc&action=index"><i class="ion-ios-download-outline"></i> <span class="">ดาวน์โหลดเอกสาร</span></a>
         </li>
-        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <li>
           <a href="?controller=contact&action=index"><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
         </li>

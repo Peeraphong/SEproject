@@ -4,7 +4,8 @@ $controllers = array(
  	'company'=>['index'],
 	'submitDoc'=>['index', 'add'],
 	'downloadDoc'=>['index'],
-	'contact'=>['index', 'add']
+	'contact'=>['index', 'add'],
+	'login'=>['index', 'check']
 );
 
 function call($controller, $action){
@@ -36,6 +37,12 @@ function call($controller, $action){
 		case "contact" :	
 			require_once("models/contactModel.php");
 			$controller = new ContactController();
+		break;
+
+		case "login" :	
+			require_once("models/annouceModel.php");
+			require_once("models/accountModel.php");
+			$controller = new LoginController();
 		break;
 						
 						
