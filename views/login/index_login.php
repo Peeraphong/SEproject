@@ -10,7 +10,7 @@
  
       <form class="container" name="frmlogin"  method="post" action="?controller=login&action=check" enctype="multipart/form-data">
         <p> </p>
-        <p><b> Login Form </b></p>
+        <p><b> Login </b></p>
         <p> ชื่อผู้ใช้ :
           <input type="text" required name="Username" placeholder="Username">
         </p>

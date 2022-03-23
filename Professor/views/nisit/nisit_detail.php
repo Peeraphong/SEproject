@@ -17,28 +17,26 @@
 <br><br><br>
 
 <div class="container">
-<table width="1000" height="84" border="1">
-    <tr>
-    <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
-      <td width="160" height="42"><div align="center">รหัสนิสิต</div></td>
-      <td width="200" height="42"><div align="center">ชื่อ-นามสกุล</div></td>
-      <td width="160" height="42"><div align="center">ตำแหน่ง</div></td>
-      <td width="150" height="42"><div align="center">รายละเอียด</div></td>
-      <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
-    </tr>
+    
     <?php 
-      foreach($form as $form)
-      {
-        echo"<tr>
-        <td>$form->nisit_no </td> 
-        <td>$form->name_surname</td>
-        <td>$form->intern_position</td>
-        <td><a href=?controller=nisit&action=nisit_detail&form_id=$form->form_id>รายละเอียด</a></td>
-        </tr>"; 
-      }
-        echo "</table>";
-    ?>
+  foreach($form as $form)
+  {
+    echo '<b>ชื่อ-นามสกุล : </b>';
+    echo $form->name_surname;
+    echo '<br><br><b>รหัสนิสิต : </b>';
+    echo $form->nisit_no;
+    echo '<br><br><b>วันที่ยื่นคำร้อง : </b>';
+    echo $form->petition;
+    echo '<br><br><b>บริษัทที่ไปฝึก : </b>';
+    echo $form->company_name;
+    echo '<br><br><b>ระยะเวลาการฝึกงาน : </b>';
+    echo $form->start_intern;
+    echo '<b> ถึง </b>';
+    echo $form->end_intern; 
+    echo '<br><br><br><br>';
 
+  }
+  ?>
 </div>
 </body>
 

@@ -25,9 +25,10 @@
         public $end_intern;
         public $salary;
         public $room;
+        public $status;
 
         public function __construct($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
-        $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room){
+        $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room,$status){
             $this->intern_coop = $intern_coop;
             $this->form_id = $form_id;
             $this->petition = $petition;
@@ -52,6 +53,7 @@
             $this->end_intern = $end_intern;
             $this->salary = $salary;
             $this->room = $room;
+            $this->status = $status;
         }
 
         public static function getAll(){
@@ -84,9 +86,10 @@
                 $end_intern = $my_row['end_intern'];
                 $salary = $my_row['salary'];
                 $room = $my_row['room'];
+                $status = $my_row['status'];
 
                 $submitList[]=new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
-                $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room);
+                $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room,$status);
             }
             require("connection_close.php");
             return $submitList;
@@ -97,9 +100,9 @@
             require("connection_connect.php");
 
             $sql = "INSERT INTO `form_internship` (`form_id`,`intern_coop`,`petition`,`nisit_no`,`name_surname`,`telephone_no`,`facebook_name`,`intern_position`,`person1_name`,`pos_ps1`,`company_name`,`house_number`,
-            `street`,`districts`,`amphures`,`provinces`,`postcode`,`HR_name`,`HR_number`,`email`,`start_intern`,`end_intern`,`salary`,`room`) VALUES (NULL,'$intern_coop','$petition','$nisit_no','$name_surname',
+            `street`,`districts`,`amphures`,`provinces`,`postcode`,`HR_name`,`HR_number`,`email`,`start_intern`,`end_intern`,`salary`,`room`,`status`) VALUES (NULL,'$intern_coop','$petition','$nisit_no','$name_surname',
             '$telephone_no','$facebook_name','$intern_position','$person1_name','$pos_ps1','$company_name','$house_number','$street','$districts','$amphures','$provinces','$postcode','$HR_name','$HR_number',
-            '$email','$start_intern','$end_intern','$salary','$room')";
+            '$email','$start_intern','$end_intern','$salary','$room','รอการอนุมัติ')";
 
             $result = $conn->query($sql);
 
@@ -141,11 +144,12 @@
                 $end_intern = $my_row['end_intern'];
                 $salary = $my_row['salary'];
                 $room = $my_row['room'];
+                $status = $my_row['status'];
 
                 $submitList[]=new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1
                 ,$company_name,$house_number,
                 $street,$districts,$amphures
-                ,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room);
+                ,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room,$status);
             }
             require("connection_close.php");
             return $submitList;

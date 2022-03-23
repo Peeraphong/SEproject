@@ -7,7 +7,7 @@ $controllers = array(
 	'contact'=>['index', 'add'],
 	'login'=>['index', 'check'],
 	'logout'=>['index'],
-	'nisit'=>['index','nisit']
+	'nisit'=>['index','nisit_detail']
 );
 
 function call($controller, $action){
@@ -48,7 +48,6 @@ function call($controller, $action){
 		break;
 
 		case "logout" :	
-			
 			$controller = new LogOutController();
 		break;
 
