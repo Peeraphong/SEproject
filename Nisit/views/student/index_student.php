@@ -21,8 +21,14 @@
     <?php echo $nisit->Student_Name ?><br><br>
     <b>รหัสนิสิต :</b>
     <?php echo $nisit->Student_ID ?><br><br>
-    <b>ผลการอนุมัติคำร้อง :</b>
+    <?php 
+  foreach($form as $form)
+  {
+    echo '<b>ผลการอนุมัติคำร้อง :</b>';
+    echo $form->form_id;
 
+  }
+  ?>
 </div>
 </body>
 

@@ -20,7 +20,7 @@ if(isset($_GET['controller']) && isset($_GET['action']))
 <link href="https://icons8.com/icon/20FjgTazh8FG/download"></link>
   <div class="nav2">
     <a href="?controller=logout&action=index">Logout</a>
-    <a href="">ตรวจสอบคำร้อง</a>
+    <a href="?controller=nisit&action=index">ตรวจสอบคำร้อง</a>
   </div>
 </head>
 <body>

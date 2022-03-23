@@ -17,8 +17,25 @@
 <br><br><br>
 
 <div class="container">
-    <b>ชื่อ-นามสกุล :</b> 
-    
+<table width="1000" height="84" border="1">
+    <tr>
+    <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
+      <td width="2000" height="42"><div align="center">ข่าวประชาสัมพันธ์</div></td>
+      <td width="160" height="42"><div align="center">วันที่ติดประกาศ</div></td>
+      <td width="150" height="42"><div align="center">รายละเอียด</div></td>
+      <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
+    </tr>
+    <?php 
+      foreach($form as $form)
+      {
+        echo"<tr>
+        <td><b>$form->nisit_no </b></td> 
+        <td>$form->name_surname</td>
+        <td>$form->form_id</td>
+        </tr>"; 
+      }
+        echo "</table>";
+    ?>
 
 </div>
 </body>

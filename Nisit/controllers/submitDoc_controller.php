@@ -8,6 +8,7 @@ class SubmitDocController
 
     public static function add()
     {
+        //$form_id = $_GET['form_id'];
         $intern_coop = $_GET['intern_coop'];
         $petition = $_GET['petition'];
         $nisit_no = $_GET['nisit_no'];

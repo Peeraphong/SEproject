@@ -61,7 +61,7 @@
 
             require("connection_connect.php");
 
-            $sql = "SELECT * FROM student WHERE Student_ID = '$Student_ID' ";
+            $sql = "SELECT * FROM student NATURAL JOIN form_internship WHERE Student_ID = '$Student_ID' ";
             $result = $conn->query($sql);
             $my_row = $result->fetch_assoc();
 

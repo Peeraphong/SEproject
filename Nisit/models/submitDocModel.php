@@ -1,6 +1,7 @@
 <?php
     ini_set('memory_limit', '4096M');
     class SubmitDoc{
+        public $form_id;
         public $intern_coop;
         public $petition;
         public $nisit_no;
@@ -25,9 +26,10 @@
         public $salary;
         public $room;
 
-        public function __construct($intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
+        public function __construct($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
         $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room){
             $this->intern_coop = $intern_coop;
+            $this->form_id = $form_id;
             $this->petition = $petition;
             $this->nisit_no = $nisit_no;
             $this->name_surname = $name_surname;
@@ -58,6 +60,7 @@
             $sql="SELECT * FROM form_internship";
             $result=$conn->query($sql);
             while($my_row = $result->fetch_assoc()){
+                $form_id = $my_row['form_id'];
                 $intern_coop = $my_row['intern_coop'];
                 $petition = $my_row['petition'];
                 $nisit_no = $my_row['nisit_no'];
@@ -82,7 +85,7 @@
                 $salary = $my_row['salary'];
                 $room = $my_row['room'];
 
-                $submitList[]=new SubmitDoc($intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
+                $submitList[]=new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
                 $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room);
             }
             require("connection_close.php");
@@ -93,10 +96,10 @@
         $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room){
             require("connection_connect.php");
 
-            $sql = "INSERT INTO `form_internship` (`intern_coop`,`petition`,`nisit_no`,`name_surname`,`telephone_no`,`facebook_name`,`intern_position`,`person1_name`,`pos_ps1`,`company_name`,`house_number`,
-            `street`,`districts`,`amphures`,`provinces`,`postcode`,`HR_name`,`HR_number`,`email`,`start_intern`,`end_intern`,`salary`,`room`) VALUES ('$intern_coop','$petition','$nisit_no','$name_surname',
+            $sql = "INSERT INTO `form_internship` (`form_id`,`intern_coop`,`petition`,`nisit_no`,`name_surname`,`telephone_no`,`facebook_name`,`intern_position`,`person1_name`,`pos_ps1`,`company_name`,`house_number`,
+            `street`,`districts`,`amphures`,`provinces`,`postcode`,`HR_name`,`HR_number`,`email`,`start_intern`,`end_intern`,`salary`,`room`,`status`) VALUES (NULL,'$intern_coop','$petition','$nisit_no','$name_surname',
             '$telephone_no','$facebook_name','$intern_position','$person1_name','$pos_ps1','$company_name','$house_number','$street','$districts','$amphures','$provinces','$postcode','$HR_name','$HR_number',
-            '$email','$start_intern','$end_intern','$salary','$room')";
+            '$email','$start_intern','$end_intern','$salary','$room','รอการอนุมัติ')";
 
             $result = $conn->query($sql);
 
@@ -104,6 +107,49 @@
 
             return("add success $result row");
             
+        }
+
+        public static function get($ID){
+
+            $submitList=[];
+            require("connection_connect.php");
+            $sql = "SELECT * FROM `form_internship` INNER JOIN student ON form_internship.nisit_no = student.Student_ID WHERE student.Student_ID = '$ID' ";
+            $result = $conn->query($sql);
+            while($my_row = $result->fetch_assoc()){
+
+                $form_id = $my_row['form_id'];
+                $intern_coop = $my_row['intern_coop'];
+                $petition = $my_row['petition'];
+                $nisit_no = $my_row['nisit_no'];
+                $name_surname = $my_row['name_surname'];
+                $telephone_no = $my_row['telephone_no'];
+                $facebook_name = $my_row['facebook_name'];
+                $intern_position = $my_row['intern_position'];
+                $person1_name = $my_row['person1_name'];
+                $pos_ps1 = $my_row['pos_ps1'];
+                $company_name = $my_row['company_name'];
+                $house_number = $my_row['house_number'];
+                $street = $my_row['street'];
+                $districts = $my_row['districts'];
+                $amphures = $my_row['amphures'];
+                $provinces = $my_row['provinces'];
+                $postcode = $my_row['postcode'];
+                $HR_name = $my_row['HR_name'];
+                $HR_number = $my_row['HR_number'];
+                $email = $my_row['email'];
+                $start_intern = $my_row['start_intern'];
+                $end_intern = $my_row['end_intern'];
+                $salary = $my_row['salary'];
+                $room = $my_row['room'];
+
+                $submitList[]=new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1
+                ,$company_name,$house_number,
+                $street,$districts,$amphures
+                ,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room);
+            }
+            require("connection_close.php");
+            return $submitList;
+          
         }
     }
 

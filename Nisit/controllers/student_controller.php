@@ -6,6 +6,7 @@
             $ID = $_SESSION['Student_ID'];
             //$ID=$_GET['Student_ID'];       
             $nisit = Student::get($ID);
+            $form = SubmitDoc::get($ID);
             require_once("./views/student/index_student.php");
         }
 
