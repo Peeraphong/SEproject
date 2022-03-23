@@ -24,8 +24,16 @@
     <?php 
   foreach($form as $form)
   {
-    echo '<b>ผลการอนุมัติคำร้อง :</b>';
-    echo $form->form_id;
+    echo '<b>วันที่ยื่นคำร้อง : </b>';
+    echo $form->petition;
+    echo '<br><br><b>บริษัทที่ไปฝึก : </b>';
+    echo $form->company_name;
+    echo '<br><br><b>ระยะเวลาการฝึกงาน : </b>';
+    echo $form->start_intern;
+    echo '<b> ถึง </b>';
+    echo $form->end_intern; 
+    echo '<br><br><b>ผลการอนุมัติคำร้อง : </b>';
+    echo $form->status;
 
   }
   ?>
