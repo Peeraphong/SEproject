@@ -112,49 +112,54 @@
             
         }
 
-        public static function get($ID){
+        public static function get($id)
+    {
+        $list = [];
+        require("connection_connect.php");
+        $sql="SELECT * FROM `form_internship`  WHERE form_internship.form_id = '$id' ";
+        $result=$conn->query($sql);
+        $my_row=$result->fetch_assoc();
+        
+        $form_id = $my_row['form_id'];
+        $intern_coop = $my_row['intern_coop'];
+        $petition = $my_row['petition'];
+        $nisit_no = $my_row['nisit_no'];
+        $name_surname = $my_row['name_surname'];
+        $telephone_no = $my_row['telephone_no'];
+        $facebook_name = $my_row['facebook_name'];
+        $intern_position = $my_row['intern_position'];
+        $person1_name = $my_row['person1_name'];
+        $pos_ps1 = $my_row['pos_ps1'];
+        $company_name = $my_row['company_name'];
+        $house_number = $my_row['house_number'];
+        $street = $my_row['street'];
+        $districts = $my_row['districts'];
+        $amphures = $my_row['amphures'];
+        $provinces = $my_row['provinces'];
+        $postcode = $my_row['postcode'];
+        $HR_name = $my_row['HR_name'];
+        $HR_number = $my_row['HR_number'];
+        $email = $my_row['email'];
+        $start_intern = $my_row['start_intern'];
+        $end_intern = $my_row['end_intern'];
+        $salary = $my_row['salary'];
+        $room = $my_row['room'];
+        $status = $my_row['status'];
+        
+        require("connection_close.php");
+        return new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1,$company_name,$house_number,
+        $street,$districts,$amphures,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room,$status);
+        
 
-            $submitList=[];
-            require("connection_connect.php");
-            $sql = "SELECT * FROM `form_internship` INNER JOIN student ON form_internship.nisit_no = student.Student_ID WHERE student.Student_ID = '$ID' ";
-            $result = $conn->query($sql);
-            while($my_row = $result->fetch_assoc()){
-
-                $form_id = $my_row['form_id'];
-                $intern_coop = $my_row['intern_coop'];
-                $petition = $my_row['petition'];
-                $nisit_no = $my_row['nisit_no'];
-                $name_surname = $my_row['name_surname'];
-                $telephone_no = $my_row['telephone_no'];
-                $facebook_name = $my_row['facebook_name'];
-                $intern_position = $my_row['intern_position'];
-                $person1_name = $my_row['person1_name'];
-                $pos_ps1 = $my_row['pos_ps1'];
-                $company_name = $my_row['company_name'];
-                $house_number = $my_row['house_number'];
-                $street = $my_row['street'];
-                $districts = $my_row['districts'];
-                $amphures = $my_row['amphures'];
-                $provinces = $my_row['provinces'];
-                $postcode = $my_row['postcode'];
-                $HR_name = $my_row['HR_name'];
-                $HR_number = $my_row['HR_number'];
-                $email = $my_row['email'];
-                $start_intern = $my_row['start_intern'];
-                $end_intern = $my_row['end_intern'];
-                $salary = $my_row['salary'];
-                $room = $my_row['room'];
-                $status = $my_row['status'];
-
-                $submitList[]=new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1
-                ,$company_name,$house_number,
-                $street,$districts,$amphures
-                ,$provinces,$postcode,$HR_name,$HR_number,$email,$start_intern,$end_intern,$salary,$room,$status);
-            }
-            require("connection_close.php");
-            return $submitList;
-          
-        }
+    }
+    public static function update($status,$oldid)
+    {
+       require("connection_connect.php");
+       $sql="UPDATE `form_internship` SET `status`='$status' WHERE form_id = '$oldid'";
+       $result=$conn->query($sql);
+       require("connection_close.php");
+       return ;
+    }
     }
 
 ?>

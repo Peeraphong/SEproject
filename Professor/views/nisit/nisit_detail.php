@@ -18,36 +18,73 @@
 
 <div class="container">
     
-    <?php 
-  foreach($form as $form)
-  {
-    echo '<b>ชื่อ-นามสกุล : </b>';
-    echo $form->name_surname;
-    echo '<br><br><b>รหัสนิสิต : </b>';
-    echo $form->nisit_no;
-    echo '<br><br><b>วันที่ยื่นคำร้อง : </b>';
-    echo $form->petition;
-    echo '<br><br><b>บริษัทที่ไปฝึก : </b>';
-    echo $form->company_name;
-    echo '<br><br><b>ระยะเวลาการฝึกงาน : </b>';
-    echo $form->start_intern;
-    echo '<b> ถึง </b>';
-    echo $form->end_intern; 
-    echo '<br><br><br><br>';
+  <div>
+    <?php echo '<b>ชื่อ-นามสกุล : </b>'; 
+          echo $form->name_surname; 
+          echo '<br><br><b>รหัสนิสิต : </b>';
+          echo $form->nisit_no;
 
-  }
-  ?>
+          echo '<br><br><b>ยื่นคำร้องในการ : </b>';
+          echo $form->intern_coop;
+          echo '<br><br><b>วันที่ยื่นคำร้อง : </b>';
+          echo $form->petition;
+          
+          echo '<br><br><b>บริษัทที่ไปฝึก : </b>';
+          echo $form->company_name;
+          echo '<br><br><b>ระยะเวลาการฝึกงาน : </b>';
+          echo $form->start_intern;
+          
+          echo '<b> ถึง </b>';
+          echo $form->end_intern;
+          
+          echo '<br><br><b>ตำเเหน่งที่ไปฝึกงาน : </b>';
+          echo $form->intern_position;
+
+
+          echo '<br><br><b>ผู้บริหารบริษัท : </b>';
+          echo $form->person1_name;
+          echo '<br><br><b>ผู้ประสานงาน : </b>';
+          echo $form->HR_name;
+          echo '<br><br><b>โทรศัพท์ : </b>';
+          echo $form->HR_number;
+          echo '<br><br><b>E-mail : </b>';
+          echo $form->email;
+
+
+          echo '<br><br><b>สถานะ : </b>';
+          echo $form->status;
+    ?>
+  </div>
+  <br>
+
+  <form class="btn" method="get" action="">
+    <input type="hidden"name="controller"value="nisit"/>
+    <input type="hidden" name="form_id" value="<?php echo $form->form_id; ?>"/>
+    <input type="hidden" name="status" value="อนุมัติ"/>
+    <button  type= "submit"name="action"value="update">อนุมัติ</button>
+  </form> 
+
+  <form class="btn" method="get" action="">  
+    <input type="hidden"name="controller"value="nisit"/>
+    <input type="hidden" name="form_id" value="<?php echo $form->form_id; ?>"/>
+    <input type="hidden" name="status" value="ไม่อนุมัติ"/>
+    <button  type= "submit"name="action"value="update">ไม่อนุมัติ</button>
+  </form> 
+
 </div>
 </body>
 
 <style>
+  .btn {
+    margin-left: 150px;
+  }
 
   table {
     text-align: center;
   }
 
   .container {
-    margin-left: 37em;
+    margin-left: 55em;
     
   }
 

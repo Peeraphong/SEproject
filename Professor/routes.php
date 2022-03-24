@@ -7,7 +7,7 @@ $controllers = array(
 	'contact'=>['index', 'add'],
 	'login'=>['index', 'check'],
 	'logout'=>['index'],
-	'nisit'=>['index','nisit_detail','getDetail']
+	'nisit'=>['index','nisit_detail','getDetail','update']
 );
 
 function call($controller, $action){
