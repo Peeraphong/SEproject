@@ -62,9 +62,9 @@ if(isset($_GET['controller']) && isset($_GET['action']))
 
 <style>
 @charset "UTF-8";
-@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,300,600);
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
 body {
-  font-family: "Lato";
+  font-family: 'K2D', sans-serif;
   font-size: 100%;
   overflow-y: scroll;
   font-family: sans-serif;
@@ -84,6 +84,7 @@ body {
 }
 
 a {
+  font-family: 'K2D', sans-serif;
   text-decoration: none;
   -webkit-transition: all 0.6s ease;
   -moz-transition: all 0.6s ease;
@@ -114,7 +115,7 @@ Sidebar
   -webkit-backface-visibility: hidden;
 }
 .sidebar header {
-  background-color: #0080FE;
+  background-color: #4D77FF;
   width: 100%;
   display: block;
   padding: 0.75em 1em;
@@ -125,7 +126,7 @@ Sidebar Nav
 ----------------*/
 .sidebar-nav {
   position: fixed;
-  background-color: #0080FE;
+  background-image: linear-gradient(#4D77FF, #56BBF1);
   height: 100%;
   font-weight: 400;
   font-size: 1.2em;
@@ -212,24 +213,27 @@ Sidebar Nav
 
 .nav2 {
   overflow: hidden;
-  background-color: #3DB2FF;
+  background-image: linear-gradient(to right, #4D77FF, #5EE6EB);
   position: fixed;
   height: 70px;
   width: 100%;
+  font-weight: bold;
+  text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px;
+  font-family: 'K2D', sans-serif;
 }
 
 .nav2 a {
-  
   float: right;
   color: black;
   text-align: center;
   padding: 29px 30px;
   text-decoration: none;
-  font-size: 17px;
+  font-size: 18px;
+  font-family: 'K2D', sans-serif;
 }
 
 .nav2 a:hover {
-  background-color: #ddd;
+  background-color: white;
   color: black;
 }
 

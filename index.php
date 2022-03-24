@@ -125,7 +125,7 @@ Sidebar Nav
 ----------------*/
 .sidebar-nav {
   position: fixed;
-  background-image: linear-gradient(#4D77FF, #5EE6EB);
+  background-image: linear-gradient(#4D77FF, #56BBF1);
   height: 100%;
   font-weight: 400;
   font-size: 1.2em;
@@ -217,14 +217,13 @@ Sidebar Nav
   height: 70px;
   width: 100%;
   font-weight: bold;
-  text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
-               #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+  text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px;
   font-family: 'K2D', sans-serif;
 }
 
 .nav2 a {
   float: right;
-  color: white;
+  color: black;
   text-align: center;
   padding: 29px 30px;
   text-decoration: none;

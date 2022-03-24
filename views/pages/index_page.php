@@ -94,7 +94,7 @@
   
 
   .title {
-    margin-left: 15em;
+    margin-left: 11em;
     text-align: center;
     font-size: 30px;
     color: #84DFFF;
