@@ -43,24 +43,35 @@
 </body>
 
 <style>
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
+
+
   table {
     text-align: center;
   }
 
   th {
-      padding: 8px;
+    padding: 8px;
       text-align: center;
-      border-bottom: 1px solid #ddd;
-      background-color: gray;
+      border-style: solid;
+      border-width: 2px;
+      border-color: #4D77FF;
+      background-image: linear-gradient(#4D77FF, #5EE6EB);
       color: white;
+      font-size: 18px;
+      text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+                   #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+                   #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+      font-family: 'K2D', sans-serif;
   }
 
   td {
     padding: 8px;
     text-align: left;
-    border-bottom: 1px solid #ddd;
-    
-    background-color: #D3D3D3;
+    border-style: solid;
+    border-width: 2px;
+    background-color: #CAF0F8;
+    font-family: 'K2D', sans-serif;
   }
 
   .container {
@@ -70,7 +81,19 @@
   .title {
     margin-left: 15em;
     text-align: center;
-    font-size: 20px;
+    font-size: 30px;
+    color: #84DFFF;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+                 #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+                 #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px,
+                 #000 0px 0px 1px,   #000 0px 0px 1px,   #000 0px 0px 1px;
+    font-family: 'K2D', sans-serif;
   }
+
+  a {
+    font-weight: bold;
+  }
+
+
 </style>
 </html>
