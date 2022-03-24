@@ -35,6 +35,29 @@
             require("connection_close.php");
             return $comList;
         }
+
+        public static function search($key){
+            $comList=[];
+
+            require("connection_connect.php");
+
+            $sql = "SELECT * FROM company WHERE( Company_ID LIKE '%$key%' or Company_Name LIKE '%$key%' or detail LIKE '%$key%' )";
+            $result = $conn->query($sql); 
+
+            while($my_row = $result->fetch_assoc()){
+                $name = $my_row['Company_Name'];
+                $address = $my_row['Company_Address'];
+                $contact = $my_row['Company_Contact'];
+                $com_no = $my_row['Company_No'];
+                $detail = $my_row['detail'];
+                $salary = $my_row['salary'];
+    
+                $comList[]=new Company($name,$address,$contact,$com_no,$detail,$salary);
+            }
+
+            require("connection_close.php");
+            return $comList;
+        }
     }
 
 ?>

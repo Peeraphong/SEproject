@@ -14,15 +14,22 @@
     <b>สถานประกอบการที่เคยรับนิสิตฝึกงาน</b>
   </div>
 <br><br>
-  <div class="container">
+
     
+  <div class="container">
+    <form  method="get" action="">
+            <input type="text" class="form__input" name="key" placeholder="search">
+            <input type="hidden" name="controller" value="company">
+            <button type="submit" class="button" name="action" value="search">
+            🍳</button> 
+    </form>
     <table border = 1>
     <tr>
-    <th>ชื่อบริษัท</th>
-    <th>ตำเเหน่ง</th>
-    <th>ช่องทางติดต่อ</th>
-    <th>เบอร์โทรศัพท์</th>
-    <th>ค่าตอบเเทน</th>
+    <th width="270px" height="50px">ชื่อบริษัท</th>
+    <th width="450px" height="50px">ตำเเหน่ง</th>
+    <th width="250px" height="50px">ช่องทางติดต่อ</th>
+    <th width="100px" height="50px">เบอร์โทรศัพท์</th>
+    <th width="100px" height="50px">ค่าตอบเเทน</th>
     </tr>
     
     <?php 
@@ -44,12 +51,21 @@
 
 <style>
 
-  th {
-      padding: 8px;
-      text-align: center;
-      border-bottom: 1px solid #ddd;
-      background-color: gray;
-      color: white;
+
+
+  .form__input {
+            color: #333;
+            font-size: 15px;
+            margin-left: 58em;
+  }
+
+  .search-box {
+    margin: 30em;
+  }
+
+  table {
+    
+    border-color: black;
   }
 
   td {
@@ -59,12 +75,17 @@
     
     background-color: #D3D3D3;
   }
-  table {
-    height: 500px;
+
+  th {
+    padding: 8px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    background-color: gray;
+    color: white;
   }
 
   .container {
-    margin-left: 35em;
+    margin-left: 29em;
   }
 
   .title {

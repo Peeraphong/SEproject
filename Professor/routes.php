@@ -1,13 +1,13 @@
 <?php
 $controllers = array(
 	'pages'=>['index', 'error'],
- 	'company'=>['index'],
+ 	'company'=>['index','search'],
 	'submitDoc'=>['index', 'add'],
 	'downloadDoc'=>['index'],
 	'contact'=>['index', 'add'],
 	'login'=>['index', 'check'],
 	'logout'=>['index'],
-	'nisit'=>['index','nisit_detail','getDetail','update']
+	'nisit'=>['index','nisit_detail','update']
 );
 
 function call($controller, $action){

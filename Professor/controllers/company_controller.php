@@ -35,6 +35,13 @@ class CompanyController
         Company::update($name,$address,$contact,$com_no);
         CompanyController::index();
     }
+
+    public function search()
+    {
+        $key=$_GET['key'];
+        $comList = Company::search($key);
+        require_once("./views/company/index_company.php");
+    }
 }
 
 ?>
