@@ -9,7 +9,8 @@
         }
 
         public function nisit_detail()
-        {
+        {   
+            $ID = $_GET['form_id'];
             $form = SubmitDoc::getAll();
             require_once("./views/nisit/nisit_detail.php");
         }

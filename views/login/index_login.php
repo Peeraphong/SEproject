@@ -7,7 +7,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 </head>
 <body>
- 
+    <div class="window">
       <form class="container" name="frmlogin"  method="post" action="?controller=login&action=check" enctype="multipart/form-data">
         <p> </p>
         <p><b> Login </b></p>
@@ -19,12 +19,11 @@
         </p>
         <p>
           <button type="submit" name="action" value="Login">Login</button>
-          &nbsp;&nbsp;
-          <button type="reset">Reset</button>
+          
           <br>
         </p>
       </form>-->
-      
+    </div>  
 </body>
 
 <style>
@@ -33,6 +32,8 @@
     text-align: center;
     font-size: 20px;
   }
+
+  
 
 </style>
 </html>

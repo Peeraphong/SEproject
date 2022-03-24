@@ -18,8 +18,8 @@
   <table width="1000" height="84" border="1">
     <tr>
     <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
-      <td width="500" height="42"><div align="center"><b>เอกสารที่เกี่ยวข้อง</b></div></td>
-      <td width="100" height="42"><div align="center"><b>รายละเอียด</b></div></td>
+      <th width="500" height="42"><div align="center"><b>เอกสารที่เกี่ยวข้อง</b></div></th>
+      <th width="100" height="42"><div align="center"><b>รายละเอียด</b></div></th>
       <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
     </tr>
     <?php 
@@ -45,6 +45,22 @@
 <style>
   table {
     text-align: center;
+  }
+
+  th {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background-color: gray;
+      color: white;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+    background-color: #D3D3D3;
   }
 
   .container {

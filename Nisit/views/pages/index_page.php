@@ -20,9 +20,9 @@
   <table width="1000" height="84" border="1">
     <tr>
     <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
-      <td width="2000" height="42"><div align="center">ข่าวประชาสัมพันธ์</div></td>
-      <td width="160" height="42"><div align="center">วันที่ติดประกาศ</div></td>
-      <td width="150" height="42"><div align="center">รายละเอียด</div></td>
+      <th width="2000" height="42"><div align="center">ข่าวประชาสัมพันธ์</div></th>
+      <th width="160" height="42"><div align="center">วันที่ติดประกาศ</div></th>
+      <th width="150" height="42"><div align="center">รายละเอียด</div></th>
       <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
     </tr>
     <?php 
@@ -45,6 +45,21 @@
 </body>
 
 <style>
+  th {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background-color: gray;
+      color: white;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+    background-color: #D3D3D3;
+  }
   .container {
     margin-left: 37em;
   }

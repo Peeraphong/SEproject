@@ -81,6 +81,9 @@
       <input type="radio" required name="room" value="มี"> มี<br><br>
       <input type="radio" name="room" value="ไม่มี"> ไม่มี<br><br>
 
+      <!--<label>อัพโหลดใบคำร้องขอฝึกงาน/สหกิจศึกษา</label><br><br>
+      <input type="file" name="file_upload" required="required"/>-->
+
       <p>
         <input type="hidden" name="controller" value="submitDoc" />
         <input type= "submit" name= "action"  value= "add" /></input>

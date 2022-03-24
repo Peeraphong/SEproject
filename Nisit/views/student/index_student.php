@@ -34,6 +34,7 @@
     echo $form->end_intern; 
     echo '<br><br><b>ผลการอนุมัติคำร้อง : </b>';
     echo $form->status;
+    echo '<br><br><br><br>';
 
   }
   ?>

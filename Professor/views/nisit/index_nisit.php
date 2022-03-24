@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Home</title>
+  <title>CheckDoc</title>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
 <link href='https://fonts.googleapis.com/css?family=Lato:400,300,700' rel='stylesheet' type='text/css'><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
 <link rel="stylesheet" href="./style.css">
@@ -12,7 +12,7 @@
 <body>
 
 <div class="title" >
-    <b>ข้อมูลนิสิต เเละ ผลการอนุมัติคำร้อง</b>
+    <b>คำร้องขอฝึกงาน/สหกิจศึกษา</b>
   </div>
 <br><br><br>
 
@@ -20,10 +20,10 @@
 <table width="1000" height="84" border="1">
     <tr>
     <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
-      <td width="160" height="42"><div align="center">รหัสนิสิต</div></td>
-      <td width="200" height="42"><div align="center">ชื่อ-นามสกุล</div></td>
-      <td width="160" height="42"><div align="center">ตำแหน่ง</div></td>
-      <td width="150" height="42"><div align="center">รายละเอียด</div></td>
+      <th width="160" height="42"><div align="center">รหัสนิสิต</div></th>
+      <th width="200" height="42"><div align="center">ชื่อ-นามสกุล</div></th>
+      <th width="160" height="42"><div align="center">ตำแหน่ง</div></th>
+      <th width="80" height="42"><div align="center">รายละเอียด</div></th>
       <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
     </tr>
     <?php 
@@ -51,6 +51,22 @@
   .container {
     margin-left: 37em;
     
+  }
+
+  th {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background-color: gray;
+      color: white;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+    background-color: #D3D3D3;
   }
 
   .title {

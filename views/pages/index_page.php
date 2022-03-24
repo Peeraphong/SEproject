@@ -15,39 +15,64 @@
     <b>ประกาศ</b>
   </div>
 <br><br>
+<div class="window"><br><br>
+  <div class="container">
+    <table width="1000" height="84" border="1">
+      <tr>
+      <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
+        <th width="2000" height="42"><div align="center"><b>ข่าวประชาสัมพันธ์</b></div></th>
+        <th width="160" height="42"><div align="center"><b>วันที่ติดประกาศ</b></div></th>
+        <th width="150" height="42"><div align="center"><b>รายละเอียด</b></div></th>
+        <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
+      </tr>
+      <?php 
+        foreach($annouceList as $annouceList)
+        {
+          echo"<tr>
+          <td><b>$annouceList->name</b> <br><br>&nbsp;$annouceList->detail</td> 
+          <td>$annouceList->date</td>
+          <td><a href=$annouceList->link>รายละเอียด</a></td>
+          </tr>"; 
+        }
+          echo "</table>";
+      ?>
+      
+      
+    </table>
+    <br><br><br><br><br><br>
 
-<div class="container">
-  <table width="1000" height="84" border="1">
-    <tr>
-    <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
-      <td width="2000" height="42"><div align="center">ข่าวประชาสัมพันธ์</div></td>
-      <td width="160" height="42"><div align="center">วันที่ติดประกาศ</div></td>
-      <td width="150" height="42"><div align="center">รายละเอียด</div></td>
-      <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
-    </tr>
-    <?php 
-      foreach($annouceList as $annouceList)
-      {
-        echo"<tr>
-        <td><b>$annouceList->name</b> <br><br>&nbsp;$annouceList->detail</td> 
-        <td>$annouceList->date</td>
-        <td><a href=$annouceList->link>รายละเอียด</a></td>
-        </tr>"; 
-      }
-        echo "</table>";
-    ?>
-    
-    
-  </table>
-  <br><br><br><br><br><br>
-
+  </div>
 </div>
 </body>
 
 <style>
-  .container {
-    margin-left: 37em;
+  .window {
+    margin-right: 16em;
+    margin-left: 38em;
+    background: #89CFEF;
   }
+
+  .container {
+    margin-left: 1em;
+  }
+
+  th {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background-color: gray;
+      color: white;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+    background-color: #D3D3D3;
+  }
+
+  
 
   .title {
     margin-left: 15em;

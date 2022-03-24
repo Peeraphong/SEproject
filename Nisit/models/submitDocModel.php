@@ -54,6 +54,7 @@
             $this->salary = $salary;
             $this->room = $room;
             $this->status = $status;
+            
         }
 
         public static function getAll(){
@@ -145,6 +146,7 @@
                 $salary = $my_row['salary'];
                 $room = $my_row['room'];
                 $status = $my_row['status'];
+                
 
                 $submitList[]=new SubmitDoc($form_id,$intern_coop,$petition,$nisit_no,$name_surname,$telephone_no,$facebook_name,$intern_position,$person1_name,$pos_ps1
                 ,$company_name,$house_number,

@@ -19,9 +19,10 @@
     <table border = 1>
     <tr>
     <th>ชื่อบริษัท</th>
-    <th>ที่อยู่บริษัท</th>
+    <th>ตำเเหน่ง</th>
     <th>ช่องทางติดต่อ</th>
     <th>เบอร์โทรศัพท์</th>
+    <th>ค่าตอบเเทน</th>
     </tr>
     
     <?php 
@@ -29,9 +30,10 @@
       {
         echo"<tr>
         <td>$comList->name</td> 
-        <td>$comList->address</td>
+        <td>$comList->detail</td>
         <td>$comList->contact</td>
         <td>$comList->com_no</td>
+        <td>$comList->salary</td>
         </tr>"; 
       }
         echo "</table>";
@@ -42,12 +44,27 @@
 
 <style>
 
+  th {
+      padding: 8px;
+      text-align: center;
+      border-bottom: 1px solid #ddd;
+      background-color: gray;
+      color: white;
+  }
+
+  td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    
+    background-color: #D3D3D3;
+  }
   table {
     height: 500px;
   }
 
   .container {
-    margin-left: 25em;
+    margin-left: 35em;
   }
 
   .title {
