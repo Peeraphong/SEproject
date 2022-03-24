@@ -49,7 +49,7 @@ if(isset($_GET['controller']) && isset($_GET['action']))
         </li>
         <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
         <li>
-          <a href="?controller=contact&action=index"><i class="ion-ios-chatboxes-outline"></i> <span class="">Contact Us</span></a>
+          <a href="?controller=contact&action=index"><i class="ion-ios-chatboxes-outline"></i> <span class="">Message</span></a>
         </li>
       </ul>
     </nav>

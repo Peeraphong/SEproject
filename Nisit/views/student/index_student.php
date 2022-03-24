@@ -11,12 +11,8 @@
 </head>
 <body>
 
-<div class="title" >
-    <b>ข้อมูลนิสิต เเละ ผลการอนุมัติคำร้อง</b>
-  </div>
-<br><br><br>
-
 <div class="container">
+  <h3><b>ข้อมูลนิสิต เเละ ผลการอนุมัติคำร้อง</b></h3>
     <b>ชื่อ-นามสกุล :</b> 
     <?php echo $nisit->Student_Name ?><br><br>
     <b>รหัสนิสิต :</b>
@@ -43,14 +39,32 @@
 
 <style>
   .container {
-    margin-left: 37em;
-  }
+  height: 370px;
+  width: 650px;
+  margin-left: 40em;
+  margin-right: auto;
+  text-align: center;
+  font-size: 20px;
+  background-image: linear-gradient(#c5e3ec, white);
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 30px;
+  font-family: 'K2D', sans-serif;
+}
 
-  .title {
-    margin-left: 15em;
-    text-align: center;
-    font-size: 20px;
-  }
+input {
+  font-family: 'K2D', sans-serif;
+  border-radius: 10px;
+  width: 50%;
+}
+
+h3 {
+  font-size: 28px;
+  color: #34a0a4;
+  text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,
+               #000 0px 0px 1px,   #000 0px 0px 1px;
+}
 
 </style>
 </html>

@@ -10,14 +10,8 @@
 <link href="https://icons8.com/icon/20FjgTazh8FG/download"></link>
 </head>
 <body>
-
-<div class="title" >
-    <b>คำร้องขอฝึกงาน/สหกิจศึกษา</b>
-  </div>
-<br><br><br>
-
-<div class="container">
-    
+<div class="container"> 
+    <h3><b>คำร้องขอฝึกงาน/สหกิจศึกษา</b></h3>
   <div>
     <?php echo '<b>ชื่อ-นามสกุล : </b>'; 
           echo $form->name_surname; 
@@ -61,38 +55,78 @@
     <input type="hidden"name="controller"value="nisit"/>
     <input type="hidden" name="form_id" value="<?php echo $form->form_id; ?>"/>
     <input type="hidden" name="status" value="อนุมัติ"/>
-    <button  type= "submit"name="action"value="update">อนุมัติ</button>
+    <button class="bt1" type= "submit"name="action"value="update">อนุมัติ</button>
   </form> 
 
   <form class="btn" method="get" action="">  
     <input type="hidden"name="controller"value="nisit"/>
     <input type="hidden" name="form_id" value="<?php echo $form->form_id; ?>"/>
     <input type="hidden" name="status" value="ไม่อนุมัติ"/>
-    <button  type= "submit"name="action"value="update">ไม่อนุมัติ</button>
+    <button class="bt2" type= "submit"name="action"value="update">ไม่อนุมัติ</button>
   </form> 
 
 </div>
 </body>
 
 <style>
-  .btn {
-    margin-left: 150px;
-  }
+  @import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
 
-  table {
-    text-align: center;
-  }
 
-  .container {
-    margin-left: 55em;
-    
-  }
+.container {
+  height: 850px;
+  width: 650px;
+  margin-left: 40em;
+  margin-right: auto;
+  text-align: center;
+  font-size: 20px;
+  background-image: linear-gradient(#c5e3ec, white);
+  border-style: solid;
+  border-width: 1px;
+  border-color: grey;
+  border-radius: 30px;
+  font-family: 'K2D', sans-serif;
+}
 
-  .title {
-    margin-left: 15em;
-    text-align: center;
-    font-size: 20px;
-  }
+input {
+  font-family: 'K2D', sans-serif;
+  border-radius: 10px;
+  width: 50%;
+}
+
+h3 {
+  font-size: 28px;
+  color: #34a0a4;
+  text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,
+               #000 0px 0px 1px,   #000 0px 0px 1px;
+}
+
+button.bt1 {
+  font-family: 'K2D', sans-serif;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+  background-image: linear-gradient(to right, #168aad, #76c893);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+button.bt2 {
+  font-family: 'K2D', sans-serif;
+  color: white;
+  font-weight: bold;
+  padding: 1em;
+  background-image: linear-gradient(to right, #FF2400, #FF9900);
+  border: none;
+  border-radius: 30px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #76c893;
+}
 
 </style>
 </html>

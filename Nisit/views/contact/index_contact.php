@@ -10,12 +10,14 @@
 </head>
 <body> 
   
-  <h2>Contact Us</h2><br>
+  
     <form class="container" method= "get" action="">
-      <label>ชื่อผู้ใช้<br><br>
+      <h2>Contact Us</h2><br>
+      
+      <label>ชื่อผู้ใช้ :
       <input type= "text" name= "name" />
       </label><br><br>
-      <label>E-mail<br><br>
+      <label>E-mail :
       <input type= "text" name= "email" />
       </label><br><br>
       <p>
@@ -25,23 +27,62 @@
       </p>
       <p>
         <input type="hidden" name="controller" value="contact" />
-        <input type= "submit" name= "action"  value= "add" /></input>
-        <input type= "reset" name= "action"  value= "reset" /></input>
+        <button class="bt1" type= "submit" name= "action"  value= "add" >Send</button>
+        <button class="bt2" type= "reset" name= "action"  value= "reset" >Cancel</button>
       </p>
     </form>
   
 </body>
 
 <style>
-  .container {
-    margin-left: 30em;
-    
-  }
+@import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
 
-  h2 {
-    margin-left: 15em;
+  .container {
+    height: 550px;
+    width: 600px;
+    margin-left: 35em;
+    margin-right: auto;
     text-align: center;
     font-size: 20px;
+    background-image: linear-gradient(#c5e3ec, white);
+    border-style: solid;
+    border-width: 1px;
+    border-color: grey;
+    border-radius: 30px;
+    font-family: 'K2D', sans-serif;
+  }
+
+  button.bt1 {
+    width: 100px;
+    font-family: 'K2D', sans-serif;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+		background-image: linear-gradient(to right, #168aad, #76c893);
+		border: none;
+		border-radius: 30px;
+		font-weight: 600;
+    margin-top: 20px;
+  }
+  
+  button.bt2 {
+    width: 100px;
+    font-family: 'K2D', sans-serif;
+    color: white;
+    font-weight: bold;
+    padding: 1em;
+		background-image: linear-gradient(to right, #FF2400, #FF9900);
+		border: none;
+		border-radius: 30px;
+		font-weight: 600;
+    margin-top: 20px;
+  }
+
+  h3 {
+    font-size: 28px;
+    color: #34a0a4;
+    text-shadow: #000 0px 0px 1px,   #000 0px 0px 1px,
+                 #000 0px 0px 1px,   #000 0px 0px 1px;
   }
 </style>
 </html>
