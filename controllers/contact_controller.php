@@ -14,7 +14,7 @@ class ContactController
 
         Contact::add($name,$email,$detail);
 
-        require_once("./Guest/views/contact/index_contact.php");
+        require_once("./views/contact/index_contact.php");
     }
 }
 

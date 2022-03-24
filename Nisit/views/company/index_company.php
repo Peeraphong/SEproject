@@ -45,6 +45,14 @@
       }
         echo "</table>";
     ?>
+
+    <?php 
+      if($comList == null){
+        echo '<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+        echo '&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+        echo "------  Not Found  ------";
+      }
+    ?>
   </div>
 
 </body>

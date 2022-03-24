@@ -34,7 +34,7 @@
   .container {
     height: 450px;
     width: 400px;
-    margin-left: 50%;
+    margin-left: 45em;
     margin-right: auto;
     text-align: center;
     font-size: 20px;

@@ -25,6 +25,14 @@
             NisitController::index();
         }
 
+        public function search()
+        {
+            
+            $key=$_GET['key'];
+            $form = SubmitDoc::search($key);
+            require_once("./views/nisit/index_nisit.php");
+        }
+
     }
 
 ?>

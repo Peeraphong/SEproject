@@ -17,12 +17,21 @@
 <br><br><br>
 
 <div class="container">
+
+  <form  method="get" action="">
+            <input type="text" class="form__input" name="key" placeholder="search">
+            <input type="hidden" name="controller" value="nisit">
+            <button type="submit" class="button" name="action" value="search">
+            🍳</button> 
+  </form>
 <table width="1000" height="84" border="1">
     <tr>
     <!--<td width="2000"><div align="center" >เรื่อง</div></td>-->
+      <th width="160" height="42"><div align="center">วันที่ยื่นคำร้อง</div></th>
       <th width="160" height="42"><div align="center">รหัสนิสิต</div></th>
       <th width="200" height="42"><div align="center">ชื่อ-นามสกุล</div></th>
-      <th width="160" height="42"><div align="center">ตำแหน่ง</div></th>
+      <th width="200" height="42"><div align="center">ตำแหน่ง</div></th>
+      <th width="100" height="42"><div align="center">สถานะ</div></th>
       <th width="80" height="42"><div align="center">รายละเอียด</div></th>
       <!--<td><div align="center">ลบ/แก้ไข</div></td>-->
     </tr>
@@ -30,13 +39,22 @@
       foreach($form as $form)
       {
         echo"<tr>
+        <td>$form->petition </td> 
         <td>$form->nisit_no </td> 
         <td>$form->name_surname</td>
         <td>$form->intern_position</td>
+        <td>$form->status</td>
         <td><a href=?controller=nisit&action=nisit_detail&form_id=$form->form_id>รายละเอียด</a></td>
         </tr>"; 
       }
         echo "</table>";
+        
+    ?>
+    <?php 
+      if($form == null){
+        echo '<br>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;';
+        echo "------  Not Found  ------";
+      }
     ?>
 
 </div>
@@ -46,6 +64,11 @@
 
 @import url('https://fonts.googleapis.com/css2?family=K2D:wght@300&display=swap');
 
+.form__input {
+            color: #333;
+            font-size: 15px;
+            margin-left: 44em;
+  }
 
 table {
   text-align: center;
